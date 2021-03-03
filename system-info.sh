@@ -27,7 +27,7 @@ echo -e "Swap Usage:\t"`free | awk '/Swap/{printf("%.2f%"), $3/$2*100}'`
 echo -e "CPU Usage:\t"`cat /proc/stat | awk '/cpu/{printf("%.2f%\n"), ($2+$4)*100/($2+$4+$5)}' |  awk '{print $0}' | head -1`
 echo ""
 echo -e "-------------------------------Current top 10 Memory and CPU Usage-----------"
-ps -eo pid,ppid,cmd,%mem,%cpu --sort=-%mem | head -n 11
+ps -eo pid,ppid,%mem,%cpu,cmd --sort=-%mem | head -n 11
 echo ""
 
 echo -e "-------------------------------Disk Usage >50%-------------------------------"
