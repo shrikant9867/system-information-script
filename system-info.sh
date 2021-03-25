@@ -16,8 +16,8 @@ echo -e "System Main IP:\t\t"`hostname -I`
 echo ""
 echo -e "-------------------------------CPU/Memory Sizes Details ---------------------"
 
-echo -e "RAM  Size: \t"`free -m | awk '/Mem/{printf("%.2fMB"),$3 }'`
-echo -e "SWAP Size: \t"`free -m | awk '/Swap/{printf("%.2fMB"),$3 }'`
+echo -e "RAM  Size: \t"`free -m | awk '/Mem/{printf("%.2fMB"),$2 }'`
+echo -e "SWAP Size: \t"`free -m | awk '/Swap/{printf("%.2fMB"),$2 }'`
 echo -e "CPU threads:\t" `nproc --all`
 echo ""
 
