@@ -48,15 +48,15 @@ cat /sys/class/fc_host/host?/port_name
 fi
 echo ""
 
-echo -e "-------------------------------Package Updates-------------------------------"
-if [ -f /etc/redhat-release ]; then
-  yum updateinfo summary | grep 'Security|Bugfix|Enhancement'
-fi
+# echo -e "-------------------------------Package Updates-------------------------------"
+# if [ -f /etc/redhat-release ]; then
+#   yum updateinfo summary | grep 'Security|Bugfix|Enhancement'
+# fi
 
-if [ -f /etc/lsb-release ]; then
-  apt-get update | grep 'Security|Bugfix|Enhancement'
-fi
-echo -e "-----------------------------------------------------------------------------"
+# if [ -f /etc/lsb-release ]; then
+#   apt-get update | grep 'Security|Bugfix|Enhancement'
+# fi
+# echo -e "-----------------------------------------------------------------------------"
 
 echo -e "-------------------------------Package Updates-------------------------------"
 cat /var/lib/update-notifier/updates-available
